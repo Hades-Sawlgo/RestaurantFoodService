@@ -5,12 +5,14 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 @RestController
 public class TestPage {
 
     @GetMapping(value = "/user", produces= MediaType.APPLICATION_JSON_VALUE)
     public User userInfo() {
-        User user = new User("Georgiy", "Balyuk", 22, 70000);
+        User user = new User("Georgiy", "Balyuk", 22, 70000, LocalDateTime.now());
         return user;
     }
 }
