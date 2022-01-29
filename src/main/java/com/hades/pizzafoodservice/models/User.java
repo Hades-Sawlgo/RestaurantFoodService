@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @ToString
+@AllArgsConstructor
 public class User {
 
     @JsonProperty
@@ -24,6 +24,7 @@ public class User {
 
     @JsonProperty
     private int salary;
-    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
-    private LocalDateTime date;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    private LocalDateTime creationDate;
+
 }

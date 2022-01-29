@@ -14,7 +14,11 @@ public class TestPage {
 
     @GetMapping(value = "/user", produces= MediaType.APPLICATION_JSON_VALUE)
     public User userInfo() {
-        User user = new User("John", "Paul", 25, 130000, LocalDateTime.now());
+        return new User("John", "Paul", 25, 130000, LocalDateTime.now());
+    }
+
+    @PostMapping(value = "/user", consumes = MediaType.APPLICATION_JSON_VALUE, produces= MediaType.APPLICATION_JSON_VALUE)
+    public User userInfo(@RequestBody User user) {
         return user;
     }
 
