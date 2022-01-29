@@ -1,5 +1,7 @@
 package com.hades.pizzafoodservice.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,10 +15,15 @@ import java.time.LocalDateTime;
 @ToString
 public class User {
 
+    @JsonProperty
     private String fname;
+    @JsonProperty
     private String lname;
+    @JsonProperty
     private int age;
 
+    @JsonProperty
     private int salary;
-    private LocalDateTime creationDate;
+    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
+    private LocalDateTime date;
 }
