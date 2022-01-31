@@ -24,6 +24,7 @@ public class User {
 
     @JsonProperty
     private int salary;
+
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime creationDate;
 

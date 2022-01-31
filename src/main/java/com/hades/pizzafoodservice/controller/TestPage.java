@@ -12,6 +12,11 @@ import java.time.LocalDateTime;
 @RestController
 public class TestPage {
 
+    @GetMapping(value = "/test", produces= MediaType.APPLICATION_JSON_VALUE)
+    public String testCall() {
+        return "Hello World!";
+    }
+
     @GetMapping(value = "/user", produces= MediaType.APPLICATION_JSON_VALUE)
     public User userInfo() {
         return new User("John", "Paul", 25, 130000, LocalDateTime.now());
