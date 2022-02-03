@@ -14,11 +14,11 @@ public class JPAConfiguration {
     @Bean
     public DataSource getDataSource() {
         //Configures Dynamic Bean Creation for H2 DataSource.
-        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.driverClassName("org.h2.Driver");
-        dataSourceBuilder.url("jdbc:h2:./data/demo");
-        dataSourceBuilder.username("sa");
-        dataSourceBuilder.password("password");
-        return dataSourceBuilder.build();
+        return DataSourceBuilder.create()
+                    .driverClassName("org.h2.Driver")
+                    .url("jdbc:h2:./data/demo")
+                    .username("sa")
+                    .password("password")
+                    .build();
     }
 }

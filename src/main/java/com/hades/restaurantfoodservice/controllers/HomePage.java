@@ -1,4 +1,4 @@
-package com.hades.restaurantfoodservice.controller;
+package com.hades.restaurantfoodservice.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
