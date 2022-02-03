@@ -1,17 +1,18 @@
-package com.hades.pizzafoodservice;
+package com.hades.restaurantfoodservice;
 
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.junit5.WireMockExtension;
-import com.hades.pizzafoodservice.models.User;
+import com.hades.restaurantfoodservice.models.User;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 import org.hamcrest.CoreMatchers;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
 import org.junit.jupiter.api.extension.RegisterExtension;
+
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDateTime;
@@ -22,10 +23,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-class PizzaFoodServiceApplicationTests {
+class RestaurantFoodServiceApplicationTests {
 
     @RegisterExtension
-    static WireMockExtension wm1 = WireMockExtension.newInstance()
+    static WireMockExtension wireMockExtension = WireMockExtension.newInstance()
             .options(wireMockConfig().dynamicPort().port(8080))
             .configureStaticDsl(true)
             .build();
@@ -35,7 +36,6 @@ class PizzaFoodServiceApplicationTests {
         ResponseDefinitionBuilder mockResponse = new ResponseDefinitionBuilder();
         mockResponse.withStatus(201);
     }
-
 
     @Test
     void coverageTest() {
@@ -54,5 +54,4 @@ class PizzaFoodServiceApplicationTests {
         assertThat(response.getBody().prettyPrint(), CoreMatchers.is("Hello World!"));
 
     }
-
 }

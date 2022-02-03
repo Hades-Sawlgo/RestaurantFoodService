@@ -1,6 +1,6 @@
-package com.hades.pizzafoodservice.controller;
+package com.hades.restaurantfoodservice.controller;
 
-import com.hades.pizzafoodservice.models.User;
+import com.hades.restaurantfoodservice.models.User;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @RestController
 public class TestPage {
 
-    @GetMapping(value = "/test", produces= MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/test")
     public String testCall() {
         return "Hello World!";
     }
