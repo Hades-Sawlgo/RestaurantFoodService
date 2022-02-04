@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Embedded Database Files and Logs ###
+/data/demo.mv.db
+/data/demo.trace.db

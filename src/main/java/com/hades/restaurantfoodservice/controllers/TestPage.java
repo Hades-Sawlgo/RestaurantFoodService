@@ -1,4 +1,4 @@
-package com.hades.restaurantfoodservice.controller;
+package com.hades.restaurantfoodservice.controllers;
 
 import com.hades.restaurantfoodservice.models.User;
 import org.springframework.http.MediaType;

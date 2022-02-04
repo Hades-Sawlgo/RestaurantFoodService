@@ -47,10 +47,10 @@ class RestaurantFoodServiceApplicationTests {
 
     @Test
     void wiremockTest() {
-        stubFor(get("/test").willReturn(aResponse().withStatus(201).withBody("Hello World!")));
-        Response response = RestAssured.given().get("http://localhost:8080/test").then().statusCode(201).extract().response();
+        stubFor(get("/test").willReturn(aResponse().withStatus(200).withBody("Hello World!")));
+        Response response = RestAssured.given().get("http://localhost:8080/test").then().statusCode(200).extract().response();
 
-        assertThat(response.getStatusCode(), CoreMatchers.is(CoreMatchers.equalTo(201)));
+        assertThat(response.getStatusCode(), CoreMatchers.is(CoreMatchers.equalTo(200)));
         assertThat(response.getBody().prettyPrint(), CoreMatchers.is("Hello World!"));
 
     }
