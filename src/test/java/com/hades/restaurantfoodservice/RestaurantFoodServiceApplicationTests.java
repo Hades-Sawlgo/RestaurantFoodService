@@ -25,6 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class RestaurantFoodServiceApplicationTests {
 
+
     @RegisterExtension
     static WireMockExtension wireMockExtension = WireMockExtension.newInstance()
             .options(wireMockConfig().dynamicPort().port(8080))
