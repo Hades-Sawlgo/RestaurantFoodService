@@ -4,12 +4,11 @@ import com.hades.restaurantfoodservice.entities.PizzaOrder;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface PizzaRepository extends CrudRepository<PizzaOrder, Long> {
+public interface PizzaRepository extends JpaRepository<PizzaOrder, Long> {
 
     @Query(value = "SELECT * FROM PizzaOrder WHERE PizzaOrderId = ?1", nativeQuery = true)
     PizzaOrder getSpecificID(Long pizzaOrderId);
